@@ -34,6 +34,36 @@ def test03():
         print(index, elem)
 
 
+def test04():
+    # 通过zip函数将两个序列压成字典
+    items2 = dict(zip(['a', 'bd', 'c'], '12345'))
+    print(items2)
+
+
+def test05():
+    '''3.6字符串格式化语法糖'''
+    a, b = 5, 10
+    print('{0} * {1} = {2}'.format(a, b, a * b))
+    print(f'{a} * {b} = {a * b}')
+
+
+def test06():
+    '''列表操作'''
+    # 列表切片
+    fruits = ['grape', 'apple', 'strawberry', 'waxberry']
+    fruits += fruits
+    print(fruits[::-1])
+    print(fruits[-3:-1])
+    fruits1 = fruits[:]
+    print(fruits1)
+    # 列表排序
+    print(sorted(fruits))
+    print(fruits)
+    # 列表创建
+    f = [x + y for x in 'abcde' for y in '123']
+    print(f)
+
+
 def generate_code(code_len=4):
     """
     生成指定长度的验证码
@@ -107,6 +137,6 @@ if __name__ == '__main__':
     # print(get_max(['d', 'a', 'c', 'b', 'cd']))
     # yh_text()
     # test03()
-    # 通过zip函数将两个序列压成字典
-    items2 = dict(zip(['a', 'bd', 'c'], '12345'))
-    print(items2)
+    test05()
+    test06()
+    pass
