@@ -3,6 +3,8 @@ import tkinter.messagebox
 import pygame
 
 
+# 如果真的需要使用Python开发GUI应用，wxPython、PyQt、PyGTK等模块都是不错的选择
+
 
 def tinker_ui():
     flag = True
@@ -41,8 +43,6 @@ def tinker_ui():
     tkinter.mainloop()
 
 
-
-
 def pgame():
     # 初始化导入的pygame中的模块
     pygame.init()
@@ -61,4 +61,3 @@ def pgame():
 
 if __name__ == '__main__':
     pgame()
-
