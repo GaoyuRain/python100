@@ -33,6 +33,7 @@ def sub_task1(data):
 def main():
     # count_queen = queues.SimpleQueue()
     # count_queen.numerator = 0
+    # 方法名  参数
     p1 = Process(target=sub_task, args=('ping',))
     p2 = Process(target=sub_task, args=('pong',))
     p1.start()

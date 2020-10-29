@@ -40,6 +40,7 @@ def save_prime():
             fs.close()
 
 
+
 def copy_pic():
     '''
     复制图片
