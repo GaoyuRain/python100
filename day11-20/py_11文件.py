@@ -40,7 +40,6 @@ def save_prime():
             fs.close()
 
 
-
 def copy_pic():
     '''
     复制图片
@@ -69,6 +68,23 @@ def copy_pic():
     finally:
         file1.close()
         file2.close()
+
+
+def copy_big_pic():
+    # 如果要复制的图片文件很大，一次将文件内容直接读入内存中可能会造成非常大的内存开销，为了减少对内存的占用，
+    # 可以为read方法传入size参数来指定每次读取的字节数，通过循环读取和写入的方式来完成上面的操作
+    try:
+        with open('python.png', 'rb') as file1, \
+                open('python.png', 'wb') as file2:
+            data = file1.read(512)
+            while data:
+                file2.write(data)
+                data = file1.read()
+    except FileNotFoundError:
+        print('指定的文件无法打开.')
+    except IOError:
+        print('读写文件时出现错误.')
+    print('程序执行结束.')
 
 
 def save_json():
