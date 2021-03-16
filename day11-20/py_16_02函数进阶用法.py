@@ -73,12 +73,14 @@ def upload1(filename):
 
 
 if __name__ == '__main__':
-    download('MySQL从删库到跑路.avi')
-    upload('Python从入门到住院.pdf')
 
-    download1('MySQL从删库到跑路.avi')
-    upload1('Python从入门到住院.pdf')
+    # download('MySQL从删库到跑路.avi')
+    # upload('Python从入门到住院.pdf')
+    #
+    # download1('MySQL从删库到跑路.avi')
+    # upload1('Python从入门到住院.pdf')
+
     # 取消装饰器
     download1.__wrapped__('MySQL必知必会.pdf')
-    upload1 = upload.__wrapped__
+    upload1 = upload1.__wrapped__
     upload1('Python从新手到大师.pdf')

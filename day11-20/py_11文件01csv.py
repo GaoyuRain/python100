@@ -8,7 +8,6 @@ import csv
 import random
 
 
-
 def test001():
     # Python标准库中的csv模块，该模块的writer函数会返回一个csvwriter对象，
     # 通过该对象的writerow或writerows方法就可以将数据写入到CSV文件中
@@ -25,6 +24,7 @@ def test001():
 
 
 def test002():
+    # 读
     with open('../filedir/scores.csv', 'r+') as file:
         reader = csv.reader(file, delimiter='|')
         # reader = csv.reader(file)
@@ -36,7 +36,18 @@ def test002():
             print()
 
 
-if __name__ == '__main__':
-    # test01()
-    test002()
+def test003():
+    # 去除csv文件中的空行
+    with open('../filedir/baoxiao.csv', 'r+') as file:
+        for row in csv.reader(file):
+            for elem in row:
+                if elem is not None:
+                    print(row)
+                    with open('../filedir/baoxiao1.csv', 'a+') as f:
+                        writer = csv.writer(f)
+                        writer.writerow(row)
 
+
+if __name__ == '__main__':
+    # test001()
+    test003()
