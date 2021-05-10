@@ -48,6 +48,9 @@ class President2:
     pass
 
 
+class President3:
+    _
+
 if __name__ == '__main__':
     pre1_1 = President1()
     pre1_2 = President1()

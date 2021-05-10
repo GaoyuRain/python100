@@ -3,6 +3,7 @@ author :rain
 Date : 2020/10/12
 Description :
 """
+import random
 
 
 def select_sort(items, comp=lambda x, y: x < y):
@@ -39,6 +40,7 @@ def bubble_sort(items, comp=lambda x, y: x > y):
 快速排序 - 选择枢轴对元素进行划分，左边都比枢轴小右边都比枢轴大
 """
 
+
 def quick_sort(items, comp=lambda x, y: x <= y):
     items = list(items)[:]
     _quick_sort(items, 0, len(items) - 1, comp)
@@ -63,7 +65,10 @@ def _partition(items, start, end, comp):
     return i + 1
 
 
+
+
 if __name__ == '__main__':
-    data = [14, 2, 0, 5, 1, 2, 6, 8, 3, 5, 11, 13, 4, 9]
-    print(select_sort(data))
+    # data = [14, 2, 0, 5, 1, 2, 6, 8, 3, 5, 11, 13, 4, 9]
+    # print(select_sort(data))
     # print(bubble_sort(data))
+    liet_sort()

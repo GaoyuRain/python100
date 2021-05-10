@@ -7,17 +7,18 @@ import random
 
 
 def test01():
-    # data = [1, 2, 3, 4]
-    data = []
-    for i in range(21):
-        data.append(random.randint(1,21))
+    # 冒泡排序
+    data = [8, 3, 0, 6, 1, 2, 3, 4]
+    # data = []
+    # for i in range(21):
+    #     data.append(random.randint(1, 21))
 
     print(data)
     # 交换次数
     num = 0
     for i in range(len(data) - 1):
         exchange = False
-        for n in range(len(data) - 1):
+        for n in range(len(data) - 1 - i):
             if data[n] > data[n + 1]:
                 data[n + 1], data[n] = data[n], data[n + 1]
                 exchange = True

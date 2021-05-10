@@ -68,7 +68,7 @@ def test03():
         print(len(bx))
     for a in bx:
         print(a)
-    wb = openpyxl.load_workbook("../filedir/1高雨测试退款订单明细_饭角新年充值活动2021.xlsx")
+    wb = openpyxl.load_workbook("../filedir/高雨测试退款订单明细_饭角226web充值测试.xlsx")
     sheet1 = wb.worksheets[0]
     # for i in range(int(len(bx) / 4) + 1):
     l = 3
@@ -82,7 +82,7 @@ def test03():
         if (i + 1) % 4 == 0:
             sheet1.cell(l, 5).value = bx[i]
             l += 1
-    wb.save("../filedir/1高雨测试退款订单明细_饭角新年充值活动2021.xlsx")
+    wb.save("../filedir/高雨测试退款订单明细_饭角226web充值测试.xlsx")
     wb.close()
 
 
