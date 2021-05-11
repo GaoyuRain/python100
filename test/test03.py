@@ -58,7 +58,7 @@ def test04():
     def fn(a):
         return a % 2 == 1
 
-    # 接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判，
+    # 接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判断，
     # 然后返回 True 或 False，最后将返回 True 的元素放到新列表  # filter 返回一个iterator
     newlist1 = list(filter(fn, a))
     # 方法2：
