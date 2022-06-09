@@ -3,6 +3,7 @@ author :rain
 Date : 2020/10/12
 Description :
 """
+import math
 import random
 
 
@@ -65,10 +66,27 @@ def _partition(items, start, end, comp):
     return i + 1
 
 
+# 完美数  对于一个 正整数，它和除了它自身以外的所有 正因子 之和相等
+def checkPerfectNumber(num: int) -> bool:
+    if num < 1 or num > math.pow(10, 8):
+        return False
+    d = 0
+    for i in range(num - 1):
+        n = i + 1
+        if num % n == 0:
+            print(n)
+            d += n
+    print(d)
+    return True if d == num else False
 
 
 if __name__ == '__main__':
     # data = [14, 2, 0, 5, 1, 2, 6, 8, 3, 5, 11, 13, 4, 9]
     # print(select_sort(data))
     # print(bubble_sort(data))
-    liet_sort()
+    # print(checkPerfectNumber(501))
+
+    for i in range(501):
+        if 501%(i+1)==0:
+            print(i+1)
+

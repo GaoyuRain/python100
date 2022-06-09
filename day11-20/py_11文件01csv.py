@@ -25,7 +25,7 @@ def test001():
 
 def test002():
     # 读
-    with open('../filedir/scores.csv', 'r+') as file:
+    with open('../filedir/scores.csv', 'r+', encoding='utf-8') as file:
         reader = csv.reader(file, delimiter='|')
         # reader = csv.reader(file)
         # print(reader.line_num)
@@ -50,4 +50,5 @@ def test003():
 
 if __name__ == '__main__':
     # test001()
-    test003()
+    test002()
+    # test003()

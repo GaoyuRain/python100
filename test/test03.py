@@ -6,6 +6,7 @@ Description :
 import copy
 import heapq
 from collections import Counter
+from collections.abc import Iterable
 
 
 def test01():
@@ -109,10 +110,47 @@ def test07():
     print('b:' + str(id(b1)))
 
 
+def qp01():
+    a = 'abcde'
+    a.strip()
+    print(a[-4:-1:2])
+
+
+def isIterable():
+    # 是否是可迭代对象
+    print(isinstance('abc', Iterable))
+
+
+def indexList():
+    for i, value in enumerate(['a', 'b', 'c', 'd']):
+        print(i, value)
+
+
+def creatList():
+    print('-' * 100)
+    print('creatList')
+    list1 = [x + y for x in '123' for y in 'abc']
+    print(list1)
+    list2 = [x if x % 2 == 0 else -x for x in range(1, 11)]
+    print(list2)
+    L = ['Hello', 'World', 18, 'Apple', None]
+    l1 = [s.lower() for s in L if isinstance(s, str)]
+    print(l1)
+
+
+def testFunc():
+    print(abs)
+    print(type(abs(-199)))
+
+
+
 if __name__ == '__main__':
     # test01()
     # test02()
     # test03()
     # test04()
     # test05()
-    test07()
+    # isIterable()
+    # indexList()
+    # creatList()
+    testFunc()
