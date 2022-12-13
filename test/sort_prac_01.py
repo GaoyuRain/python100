@@ -6,7 +6,7 @@ Description :排序算法练习
 import random
 
 
-def test01():
+def text01():
     # 冒泡排序
     data = [8, 3, 0, 6, 1, 2, 3, 4]
     # data = []
